@@ -1,4 +1,5 @@
 import { Button } from "./components/button/button";
+import { Input } from "./components/input/input";
 import { Typography } from "./components/typography/typography";
 
 export default function App() {
@@ -15,23 +16,33 @@ export default function App() {
           </Typography>
 
           <Typography variant="body">
-            A scalable and reusable design system
-            focused on accessibility, consistency
-            and modern UI architecture.
+            Professional Design System focused on
+            accessibility, consistency and premium
+            UI architecture.
           </Typography>
         </div>
 
-        <div className="flex flex-wrap gap-6">
+        <div className="grid gap-6">
+          <Input
+            label="Email"
+            placeholder="Enter your email"
+            helperText="We'll never share your email."
+          />
+
+          <Input
+            label="Password"
+            placeholder="••••••••"
+            error="Password is required"
+          />
+        </div>
+
+        <div className="flex gap-6">
           <Button variant="primary">
-            Get Started
+            Continue
           </Button>
 
           <Button variant="secondary">
-            Documentation
-          </Button>
-
-          <Button variant="ghost">
-            Learn More
+            Cancel
           </Button>
         </div>
       </div>
